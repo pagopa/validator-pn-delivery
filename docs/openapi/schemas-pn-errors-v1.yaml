@@ -3,6 +3,7 @@ components:
   schemas:
     
     Problem:
+      type: object
       properties:
         type:
           description: URI reference of type definition
@@ -39,6 +40,7 @@ components:
         - title
         - errors
     ProblemError:
+      type: object
       properties:
         code:
           description: Internal code of the error
