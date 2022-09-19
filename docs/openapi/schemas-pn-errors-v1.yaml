@@ -3,6 +3,7 @@ components:
   schemas:
     
     Problem:
+      type: object
       properties:
         type:
           description: URI reference of type definition
@@ -32,6 +33,15 @@ components:
           minItems: 0
           items:
             $ref: '#/components/schemas/ProblemError'
+        traceId:
+          description: A trace id
+          example: Self=1-631b10db-2c591f3f79954187229939e5;Root=1-631b11db-39caf6636f4ed15618461d95;Parent=6e2ef00e703981ac;Sampled=1
+          type: string
+        timestamp:
+          description: The date-time notation as defined by RFC 3339, section 5.6
+          example: 2022-09-09T10:09:31.073638Z
+          type: string
+          format: date-time
       additionalProperties: false
       required:       
         - type
