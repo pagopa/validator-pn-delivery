@@ -49,6 +49,7 @@ components:
         - title
         - errors
     ProblemError:
+      type: object
       properties:
         code:
           description: Internal code of the error
